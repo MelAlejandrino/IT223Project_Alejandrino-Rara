@@ -54,35 +54,3 @@ body {
     scroll-behavior: auto !important;
   }
 }
-
-/* general styling */
-section{
-    background-color: black;
-}
-header{
-    position: absolute;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-header a{
-    color: white;
-    font-size: 2em;
-}
-header ul{
-    display: flex;
-    gap: 1em;
-}
-.headpage{
-    background: url('/src/assets/coffinmeme.gif') no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: flex-end;
-}
-
-.tagline{
-    color: white;
-    font-size: 8em;
-    margin-bottom: 2em;
-}
