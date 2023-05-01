@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Konkhmer+Sleokchher&display=swap');
+
+#skull{
+    height: 5vmax;
+    aspect-ratio: 1;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    opacity: 0.8;
+    z-index: 1;
+}
+body{
+    font-family: 'Konkhmer Sleokchher', cursive;
+}
+
+/* header */
+header{
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    color: white;
+    transition: all 0.5s linear;
+}
+
+header[aria-expanded="true"]{
+    margin-inline: 0;
+    padding: 0;
+}
+
+header[aria-expanded="true"] .nav-tab{
+    background-color: white;
+    transition: all 0.5s ease-out;
+}
+
+header[aria-expanded="true"] .nav-tab a{
+    color: black;
+}
+.nav-tab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+header nav ul{
+    display: flex;
+    gap: 2em;
+}
+.menu{
+    display: flex;
+    align-items: center;
+}
+.menu > img{
+    cursor: pointer;
+}
+.menu > h1{
+    font-size: 2rem;
+    transition: all 1s ease;
+}
+.wrapper-nav{
+    margin-top: 5em;
+    padding: 2em;
+}
+.nav-holder{
+    transition: all 0.5s ease;    
+    opacity: 1;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    color: rgb(0, 0, 0);
+    transform: translateY(-40em);
+    height: 40em;
+}
+
+.nav-holder[data-visible="true"]{
+    opacity: 1;
+    transition: all 0.5s ease-out;
+    transform: translateY(0em);
+    z-index: -1;
+}
+/* header end */
+/* ---- */
+.headpage{
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    background-color: black;
+}
+.bg{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.5;
+}
+
+.bg > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.headpage > .title{
+    color: white;
+    text-align: center;
+    z-index: 1;
+
+}
+
+.headpage > .title > h1{
+    font-size: 9rem;
+    margin-bottom: -0.3em;
+}
+
+@media screen and (max-width: 640px) {
+    .headpage > .title > h1{
+        font-size: 20vw;
+    }
+    
+}
