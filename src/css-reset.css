@@ -29,7 +29,7 @@ ol[role='list'] {
 a{
 text-decoration: none;
 color: white;
-transition: all 2s ease;
+transition: color 1s ease;
 }
 
 a:not([class]) {
