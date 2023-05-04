@@ -282,6 +282,6 @@ section:not(.headpage) {
 /* page-4 */
 .page-4{
     background: url('./assets/chapel.jpg') no-repeat;
-    background-position: 70%;
+    background-position: center;
     background-size: cover;
 }
