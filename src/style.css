@@ -138,16 +138,13 @@ section:not(.headpage) {
 }
 
 .headpage > .title > h1 {
-  font-size: 9rem;
+  font-size: clamp(5rem, 10vw, 9rem);
   margin-bottom: -0.3em;
 }
 
 @media screen and (max-width: 640px) {
   .wrapper-nav ul a {
     font-size: 12vw;
-  }
-  .headpage > .title > h1 {
-    font-size: 20vw;
   }
 }
 
@@ -187,7 +184,7 @@ section:not(.headpage) {
   font-style: italic;
 }
 .wrapper-content {
-  padding: 2em;
+  padding: 9em;
 }
 .blursection {
   filter: brightness(0.5);
