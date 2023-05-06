@@ -184,7 +184,7 @@ section:not(.headpage) {
   font-style: italic;
 }
 .wrapper-content {
-  padding: 9em;
+  padding: 9em 2em;
 }
 .blursection {
   filter: brightness(0.5);
