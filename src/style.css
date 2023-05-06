@@ -279,11 +279,9 @@ section:not(.headpage) {
 
 /* page-4 */
 .page-4{
-    background: url('./assets/chapel.jpg') no-repeat;
-    background-position: center;
-    background-size: cover;
     display: grid;
     place-items: center;
+    position: relative;
 }
 
 .page-4 > button{
@@ -300,4 +298,18 @@ section:not(.headpage) {
   transform: scale(1.1);
   color: var(--clr-neutral);
   background-color: white;
+}
+
+/* background */
+.background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('./assets/chapel.jpg') no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: brightness(70%) saturate(120%);
+  z-index: -1;
 }
