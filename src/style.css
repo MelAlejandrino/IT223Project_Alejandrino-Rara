@@ -282,4 +282,22 @@ section:not(.headpage) {
     background: url('./assets/chapel.jpg') no-repeat;
     background-position: center;
     background-size: cover;
+    display: grid;
+    place-items: center;
+}
+
+.page-4 > button{
+  padding: 1em 3em;
+  cursor: pointer;
+  background-color: var(--clr-neutral);
+  color: white;
+  border: none;
+  border-radius: 0.5em;
+  transition: all 0.3s linear;
+}
+
+.page-4 > button:hover{
+  transform: scale(1.1);
+  color: var(--clr-neutral);
+  background-color: white;
 }
