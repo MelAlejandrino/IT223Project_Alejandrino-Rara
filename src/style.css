@@ -233,14 +233,29 @@ section:not(.headpage) {
 .card-details {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: left;
   gap: 1em;
   font-size: 1rem;
 }
 
-.card-details > button {
+
+.card-details > h1{
+  font-size: 1.2rem;
+}
+
+.card-details > p{
+  font-style: italic;
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.card-button{
+  display: grid;
+  place-items: center;
+}
+.card-button > button {
   width: 60%;
-  border-radius: 3em;
+  border-radius: 0.5em;
   outline-color: transparent;
   border: none;
   cursor: pointer;
@@ -248,11 +263,20 @@ section:not(.headpage) {
   background-color: rgb(132, 68, 0);
   color: white;
   font-weight: 500;
+  transition: all 0.5s ease;
 }
+
+.card-button > button:hover{
+  transform: scale(1.1);
+  color: white;
+  background-color: black;
+}
+
 .card-img {
   position: relative;
   overflow: hidden;
 }
+
 
 .card-img picture img {
   aspect-ratio: 1/1;
@@ -271,6 +295,7 @@ section:not(.headpage) {
   outline-color: transparent;
   border: none;
   cursor: pointer;
+  border-radius: 0.5em;
   padding: 0.5em 1em;
   background-color: rgb(132, 68, 0);
   color: white;
@@ -291,6 +316,7 @@ section:not(.headpage) {
   color: white;
   border: none;
   border-radius: 0.5em;
+  z-index: 1;
   transition: all 0.3s linear;
 }
 
@@ -301,7 +327,7 @@ section:not(.headpage) {
 }
 
 /* background */
-.background-container {
+.page-4 > .background-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -310,6 +336,45 @@ section:not(.headpage) {
   background: url('./assets/chapel.jpg') no-repeat;
   background-position: center;
   background-size: cover;
-  filter: brightness(70%) saturate(120%);
-  z-index: -1;
+  filter: brightness(50%);
+
+}
+
+/* products */
+.prodPage{
+  display: flex;
+  justify-content: center;
+  padding: 0.5em 1em;
+}
+.prodWrapper{
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.773);
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 1em;
+}
+.prodWrapper > .prodTitle{
+  text-align: center;
+  font-size: 5rem;
+  color: white;
+  border-bottom: 1px solid rgb(255, 255, 255);
+}
+.prodCategories{
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid rgb(255, 255, 255);
+  padding: 1em;
+}
+.prodCategories > ul{
+  display: flex;
+  gap: 2em;
+}
+.prodCategories > ul > li{
+  background-color: white;
+  padding: 0.5em;
+}
+.prodContainer{
+  display: flex;
+  gap: 1em;
+  padding: 1em;
+  flex-wrap: wrap;
 }

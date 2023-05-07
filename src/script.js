@@ -21,6 +21,36 @@ function isHeader(atHeader) {
   return atHeader;
 }
 // nav-tab
+// const observer = new IntersectionObserver(function (entries, observer) {
+//   entries.forEach((entry) => {
+//     const visibility = navTab.getAttribute("data-visible");
+//     if (entry.isIntersecting) {
+//       atHeader = true;
+//       navigation.classList.remove("navchange");
+//       if (atHeader === true) {
+//         if (visibility === "true") {
+//           navIcon.src = "src/assets/menublack.png";
+//           userIcon.src = "src/assets/user.png";
+//         }
+//         if (visibility === "false") {
+//           navIcon.src = "src/assets/menu.png";
+//           userIcon.src = "src/assets/userwhite.png";
+//         }
+//       }
+//     } else {
+//       atHeader = false;
+//       navigation.classList.add("navchange");
+//       if (atHeader === false) {
+//       }
+//       navIcon.src = "src/assets/menublack.png";
+//       userIcon.src = "src/assets/user.png";
+//     }
+//   });
+// });
+
+// observer.observe(headerpage);
+
+
 const navTab = document.querySelector(".nav-holder");
 const navIcon = document.getElementById("menu-icon");
 const userIcon = document.getElementById("userIcon");
@@ -28,47 +58,18 @@ const header = document.getElementById("header-tab");
 const sections = document.querySelectorAll("section");
 const headerpage = document.querySelector(".headpage");
 const navigation = document.querySelector(".nav-tab");
-let atHeader;
-const observer = new IntersectionObserver(function (entries, observer) {
-  entries.forEach((entry) => {
-    const visibility = navTab.getAttribute("data-visible");
-    if (entry.isIntersecting) {
-      atHeader = true;
-      navigation.classList.remove("navchange");
-      if (atHeader === true) {
-        if (visibility === "true") {
-          navIcon.src = "src/assets/menublack.png";
-          userIcon.src = "src/assets/user.png";
-        }
-        if (visibility === "false") {
-          navIcon.src = "src/assets/menu.png";
-          userIcon.src = "src/assets/userwhite.png";
-        }
-      }
-    } else {
-      atHeader = false;
-      navigation.classList.add("navchange");
-      if (atHeader === false) {
-      }
-      navIcon.src = "src/assets/menublack.png";
-      userIcon.src = "src/assets/user.png";
-    }
-  });
-});
-
-observer.observe(headerpage);
+let atHeader = true;
 
 navIcon.addEventListener("click", () => {
-  const headerStatus = isHeader(atHeader);
   const visibility = navTab.getAttribute("data-visible");
   if (visibility === "false") {
     navTab.setAttribute("data-visible", true);
     header.setAttribute("aria-expanded", true);
-    if (headerStatus || atChapel) {
+    if (atHeader || atChapel) {
       navIcon.src = "src/assets/menublack.png";
       userIcon.src = "src/assets/user.png";
     }
-    else if (!headerStatus || !atChapel) {
+    else if (!atHeader || !atChapel) {
       navIcon.src = "src/assets/menublack.png";
       userIcon.src = "src/assets/user.png";
     }
@@ -78,11 +79,11 @@ navIcon.addEventListener("click", () => {
   } else {
     navTab.setAttribute("data-visible", false);
     header.setAttribute("aria-expanded", false);
-    if (headerStatus === true || atChapel === true) {
+    if (atHeader === true || atChapel === true) {
       navIcon.src = "src/assets/menu.png";
       userIcon.src = "src/assets/userwhite.png";
     }
-    if (headerStatus === false && atChapel === false) {
+    if (atHeader === false && atChapel === false) {
       navIcon.src = "src/assets/menublack.png";
       userIcon.src = "src/assets/user.png";
     }
@@ -101,6 +102,7 @@ let isIntersecting = false;
 const checkIntersection = () => {
   const navRect = headerNav.getBoundingClientRect();
   const chapelRect = chapel.getBoundingClientRect();
+  const headerRect = headerpage.getBoundingClientRect();
 
   if (navRect.bottom >= chapelRect.top && navRect.top <= chapelRect.bottom) {
     const visibility = navTab.getAttribute("data-visible");
@@ -127,6 +129,35 @@ const checkIntersection = () => {
         navigation.classList.add("navchange");
         isIntersecting = false;
         atChapel = false;
+      }
+    }
+  }
+
+  if (navRect.bottom >= headerRect.top && navRect.top <= headerRect.bottom) {
+    const visibility = navTab.getAttribute("data-visible");
+    if (!isIntersecting) {
+      if (!atChapel) {
+        if (visibility == "true") {
+          navIcon.src = "src/assets/menublack.png";
+          userIcon.src = "src/assets/user.png";
+        } else {
+          navIcon.src = "src/assets/menu.png";
+          userIcon.src = "src/assets/userwhite.png";
+        }
+        navigation.classList.remove("navchange");
+        isIntersecting = true;
+        atHeader = true;
+      }
+    }
+  } else {
+    if (isIntersecting) {
+      if (atHeader) {
+        console.log("test");
+        navIcon.src = "src/assets/menublack.png";
+        userIcon.src = "src/assets/user.png";
+        navigation.classList.add("navchange");
+        isIntersecting = false;
+        atHeader = false;
       }
     }
   }

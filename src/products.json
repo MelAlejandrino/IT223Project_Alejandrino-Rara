@@ -1,0 +1,14 @@
+[
+ {
+  "name": "White Cross' Lords Prayer Casket",
+  "details": "Whitecasket with SILVER Accents",
+  "price": "₱110,500",
+  "src": "./src/assets/coffin1.png"
+ },
+ {
+  "name": "Monarch",
+  "details": "Solid Mahogany Wood Casket withIvory Velvet Interior",
+  "price": "₱130,999",
+  "src": "./src/assets/coffin2.png"
+ }
+]

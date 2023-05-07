@@ -1,143 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iCoffin</title>
-    <link rel="shortcut icon" href="src/assets/iC.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/css-reset.css">
-    <link rel="stylesheet" href="src/style.css">
-</head>
-<body>
-
+    <link rel="shortcut icon" href="src/assets/iC.png" type="image/x-icon" />
+    <link rel="stylesheet" href="src/css-reset.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/cartcounter.css">
+  </head>
+  <body>
     <header aria-expanded="false" id="header-tab">
-        <div class="nav-holder" data-visible="false">
-            <div class="wrapper-nav">
-                <nav>
-                    <ul role="list">
-                        <li><a href="">CART</a></li>
-                        <li><a href="">ABOUT</a></li>
-                        <li><a href="">CHAPEL</a></li>
-                        <li><a href="">PRODUCTS</a></li>
-                    </ul>
-                </nav>
-            </div>
+      <div class="nav-holder" data-visible="false">
+        <div class="wrapper-nav">
+          <nav>
+            <ul role="list">
+              <li><a href="">CART</a></li>
+              <li><a href="">ABOUT</a></li>
+              <li><a href="">CHAPEL</a></li>
+              <li><a href="products.html">PRODUCTS</a></li>
+            </ul>
+          </nav>
         </div>
-        <div class="nav-tab">
-            <div class="menu">
-                <img src="src/assets/menu.png" alt="" id="menu-icon">
-                <h1 id="icon"><a href="index.html">iCoffin</a></h1>
-            </div>
-            <nav>
-                <ul role="list">
-                    <li><a href="">PRODUCTS</a></li>
-                    <li><a href="">CART</a></li>
-                    <li><a href=""><img src="src/assets/userwhite.png" alt="" id="userIcon"></a></li>
-                </ul>
-            </nav>
+      </div>
+      <div class="nav-tab">
+        <div class="menu">
+          <img src="src/assets/menu.png" alt="" id="menu-icon" />
+          <h1 id="icon"><a href="index.html">iCoffin</a></h1>
         </div>
+        <nav>
+          <ul role="list">
+            <li><a href="products.html">PRODUCTS</a></li>
+            <li class="cart">
+                <a href="">CART</a>
+                <div class="counter">0</div>
+            </li>
+            <li>
+              <a href=""
+                ><img src="src/assets/userwhite.png" alt="" id="userIcon"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-        <section class="headpage">
-            <div class="title">
-                <h1>iCoffin</h1>
-                <p>LIFE PLAN</p>
-            </div>
-            <div class="bg">
-                <img src="src/assets/coffinmemeHD.gif" alt="">
-            </div>
-        </section>
+      <section class="headpage">
+        <div class="title">
+          <h1>iCoffin</h1>
+          <p>LIFE PLAN</p>
+        </div>
+        <div class="bg">
+          <img src="src/assets/coffinmemeHD.gif" alt="" />
+        </div>
+      </section>
 
-        <section class="secondpage">
-            <div class="wrapper-content">
-                <div class="page-2-content">
-                    <div class="title-content">
-                        <h1>LUXURIOUS COFFIN</h1>
-                        <p>"Unting puyat pa, akin ka na"</p>
-                    </div>
-                    <picture>
-                        <img src="src/assets/titleimg.jpg" alt="">
-                    </picture>
+      <section class="secondpage">
+        <div class="wrapper-content">
+          <div class="page-2-content">
+            <div class="title-content">
+              <h1>LUXURIOUS COFFIN</h1>
+              <p>"Unting puyat pa, akin ka na"</p>
+            </div>
+            <picture>
+              <img src="src/assets/titleimg.jpg" alt="" />
+            </picture>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-3">
+        <div class="wrapper-content">
+          <div class="title-3">ACCOMODATIONS</div>
+          <div class="card-container">
+            <div class="card">
+              <div class="card-img">
+                <picture>
+                  <img src="./src/assets/coffin1.png" alt="" />
+                </picture>
+                <div class="card-cart">
+                  <a href="" style="color: black">ADD TO CART</a>
                 </div>
-            </div>
-        </section>
-
-        <section class="page-3">
-            <div class="wrapper-content">
-                <div class="title-3">
-                    ACCOMODATIONS
+              </div>
+              <div class="card-details">
+                <h1>White Cross' Lords Prayer Casket</h1>
+                <p>Whitecasket with SILVER Accents</p>
+                <div class="card-button">
+                  <button>₱110,500</button>
                 </div>
-                <div class="card-container">
-
-                    <div class="card">
-                        <div class="card-img">
-                            <picture>
-                                <img src="./src/assets/coffin1.png" alt="">
-                            </picture>
-                            <div class="card-cart">
-                                <a href="" style="color: black;">ADD TO CART</a>
-                            </div>
-                        </div>
-                        <div class="card-details">
-                            <h1>White Cross' Lords Prayer Casket - Whitecasket with SILVER Accents</h1>
-                            <button>₱110,500</button>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img">
-                            <picture>
-                                <img src="./src/assets/coffin2.png" alt="">
-                            </picture>
-                            <div class="card-cart">
-                                <a href="" style="color: black;">ADD TO CART</a>
-                            </div>
-                        </div>
-                        <div class="card-details">
-                            <h1>Monarch - Solid Mahogany Wood Casket withIvory Velvet Interior</h1>
-                            <button>₱130,999</button>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img">
-                            <picture>
-                                <img src="./src/assets/coffin3.png" alt="">
-                            </picture>
-                            <div class="card-cart">
-                                <a href="" style="color: black;">ADD TO CART</a>
-                            </div>
-                        </div>
-                        <div class="card-details">
-                            <h1>Howard White - Metal Casket in White Finishand White Interior</h1>
-                            <button>₱100,000</button>
-                        </div>
-                    </div>
-                </div>
-                <a href="">MORE PRODUCTS</a>
+              </div>
             </div>
-        </section>
 
-        <section class="page-4">
-                <button>OUR CHAPEL</button>
-                <div class="background-container"></div>
-        </section>
+            <div class="card">
+              <div class="card-img">
+                <picture>
+                  <img src="./src/assets/coffin2.png" alt="" />
+                </picture>
+                <div class="card-cart">
+                  <a href="" style="color: black">ADD TO CART</a>
+                </div>
+              </div>
+              <div class="card-details">
+                <h1>Monarch</h1>
+                <p>Solid Mahogany Wood Casket with Ivory Velvet Interior</p>
+                <div class="card-button">
+                  <button>₱130,999</button>
+                </div>
+              </div>
+            </div>
 
-        <section class="page-5">
-            <h1>test</h1>
-        </section>
+            <div class="card">
+              <div class="card-img">
+                <picture>
+                  <img src="./src/assets/coffin3.png" alt="" />
+                </picture>
+                <div class="card-cart">
+                  <a href="" style="color: black">ADD TO CART</a>
+                </div>
+              </div>
+              <div class="card-details">
+                <h1>Howard White</h1>
+                <p>Metal Casket in White Finishand White Interior</p>
+                <div class="card-button">
+                  <button>₱100,000</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="products.html">MORE PRODUCTS</a>
+        </div>
+      </section>
 
-        <section class="page-6">
-            <h1>hey</h1>
-        </section>
+      <section class="page-4">
+        <button>OUR CHAPEL</button>
+        <div class="background-container"></div>
+      </section>
+
+      <section class="page-5">
+        <h1>test</h1>
+      </section>
+
+      <section class="page-6">
+        <h1>hey</h1>
+      </section>
     </main>
 
-    <footer>
-
-    </footer>
+    <footer></footer>
 
     <script src="src/script.js"></script>
-</body>
+  </body>
 </html>
