@@ -79,3 +79,4 @@ const checkIntersection = () => {
 };
 
 window.addEventListener("scroll", checkIntersection);
+

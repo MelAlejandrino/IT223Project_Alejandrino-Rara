@@ -7,7 +7,19 @@ labels.forEach((label) => {
   label.addEventListener('click', function() {
     const radioButton = document.getElementById(this.getAttribute('for'));
     radioButton.checked = true;
+    this.classList.add("activeCategory");
+    let next = this.nextElementSibling;
+    let before = this.previousElementSibling;
 
+    while(next) {
+    next.classList.remove("activeCategory");
+    next = next.nextElementSibling;
+  }
+
+    while(before){
+        before.classList.remove("activeCategory");
+        before = before.previousElementSibling;
+    }
     // Trigger 'change' event on the radio button
     const event = new Event('change');
     radioButton.dispatchEvent(event);
