@@ -60,7 +60,7 @@ function displayProduct(item) {
           <img src="${item.src}" alt="" />
         </picture>
         <div class="card-cart">
-          <a href="" style="color: black">ADD TO CART</a>
+          <h1 id="addCart">ADD TO CART</h1>
         </div>
       </div>
       <div class="card-details">
@@ -73,3 +73,5 @@ function displayProduct(item) {
     </div>
   `;
 }
+
+

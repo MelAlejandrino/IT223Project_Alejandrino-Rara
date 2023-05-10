@@ -8,10 +8,9 @@
     <link rel="shortcut icon" href="src/assets/iC.png" type="image/x-icon" />
     <link rel="stylesheet" href="src/css-reset.css" />
     <link rel="stylesheet" href="src/style.css" />
-    <link rel="stylesheet" href="src/cartcounter.css">
+    <link rel="stylesheet" href="src/cartcounter.css" />
   </head>
   <body>
-    
     <header aria-expanded="false" id="header-tab">
       <div class="nav-holder" data-visible="false">
         <div class="wrapper-nav">
@@ -34,8 +33,8 @@
           <ul role="list">
             <li><a href="products.html">PRODUCTS</a></li>
             <li class="cart">
-                <a href="">CART</a>
-                <div class="counter">0</div>
+              <a href="">CART</a>
+              <div class="counter">0</div>
             </li>
             <li>
               <a href=""
@@ -50,33 +49,43 @@
     <main>
       <section class="prodPage">
         <div class="prodWrapper">
-            <div class="prodTitle">PRODUCTS</div>
+          <div class="prodTitle">PRODUCTS</div>
         </div>
         <div class="background-container"></div>
       </section>
 
       <section class="itemsPage">
         <div class="prodCategories">
-          <label for="allCateg">
-            <input type="radio" name="filtCategories" id="allCateg" value="allCateg" checked>ALL
-          </label>
-          <label for="disCateg">
-            <input type="radio" name="filtCategories" id="disCateg" value="disCateg">DISCOUNTED
-          </label>
-          <label for="highCateg">
-            <input type="radio" name="filtCategories" id="highCateg" value="highCateg">HIGH-END
-          </label>
+          <label for="allCateg" class="activeCategory">ALL</label>
+          <input
+            type="radio"
+            name="filtCategories"
+            id="allCateg"
+            value="allCateg"
+            checked
+          />
+          <label for="disCateg"> DISCOUNTED </label>
+          <input
+            type="radio"
+            name="filtCategories"
+            id="disCateg"
+            value="disCateg"
+          />
+          <label for="highCateg"> HIGH-END </label>
+          <input
+            type="radio"
+            name="filtCategories"
+            id="highCateg"
+            value="highCateg"
+          />
         </div>
-        <div class="prodContainer">
-                
-        </div>
+        <div class="prodContainer"></div>
       </section>
     </main>
 
     <footer></footer>
-
-    <script src="src/script.js"></script>
     <script src="src/fetchjson.js"></script>
+    <script src="src/script.js"></script>
     <script src="src/prodpage.js"></script>
   </body>
 </html>

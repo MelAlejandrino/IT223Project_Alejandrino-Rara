@@ -47,10 +47,9 @@ let isIntersecting = false;
 
 const checkIntersection = () => {
   const navRect = headerNav.getBoundingClientRect();
-  const headerRect = headerpage.getBoundingClientRect();
-  console.log('working');
+  const headerRect = headerpage.getBoundingClientRect(); 
 
-  if (navRect.bottom >= headerRect.top && navRect.top <= headerRect.bottom) {
+  if (navRect.bottom >= headerRect.top && navRect.top <= (headerRect.bottom - 50)) {
     const visibility = navTab.getAttribute("data-visible");
     if (!isIntersecting) {
       if (!atChapel) {
@@ -69,8 +68,6 @@ const checkIntersection = () => {
   } else {
     if (isIntersecting) {
       if (atHeader) {
-        console.log(atHeader)
-        console.log("testheader");
         navIcon.src = "src/assets/menublack.png";
         userIcon.src = "src/assets/user.png";
         navigation.classList.add("navchange");
