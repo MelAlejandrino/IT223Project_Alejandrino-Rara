@@ -155,7 +155,7 @@ section:not(.headpage) {
   align-items: center;
   justify-content: center;
 position: relative;
-z-index: 1;
+
 }
 
 .page-2-content {
@@ -211,7 +211,6 @@ z-index: 1;
   place-items: center;
   text-align: center;
   position: relative;
-z-index: 1;
 }
 
 .wrapper-content{
@@ -427,4 +426,17 @@ input[type="radio"]{
 
 .scroll{
   transition: all 0.3s linear;
+}
+
+/* transition */
+.hidden{
+  opacity: 0;
+  transition: all 0.8s linear;
+  transform: translateY(150px);
+}
+
+.show{
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(-150px);
 }

@@ -8,7 +8,6 @@ window.addEventListener('scroll', (e) => {
     targets.forEach(target => {
         target.style.transform = `translate3d(0px, ${rate}px, 0px)`;
     });
-    console.log(rate)
 
     targetsContent.forEach(targetC => {
         targetC.style.transform =  `translate3d(0px, ${rateC}px, 0px)`;

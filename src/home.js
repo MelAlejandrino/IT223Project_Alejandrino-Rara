@@ -51,20 +51,22 @@ const checkIntersection = () => {
   const navRect = headerNav.getBoundingClientRect();
   const chapelRect = chapel.getBoundingClientRect();
   const headerRect = headerpage.getBoundingClientRect();
+
   if (!atHeader) {
     navIcon.src = "src/assets/menublack.png";
     userIcon.src = "src/assets/user.png";
     navigation.classList.add("navchange");
-    page2.classList.remove("scroll");
-    firstChild.classList.remove("scrollC");
+    // page2.classList.remove("scroll");
+    // firstChild.classList.remove("scrollC");
     isIntersecting = false;
     atChapel = false;
     atHeader = false;
   }
   if (
-    navRect.bottom >= chapelRect.top &&
-    navRect.top <= chapelRect.bottom - 500
+    navRect.bottom >= chapelRect.top - 50 &&
+    navRect.top <= chapelRect.bottom
   ) {
+    console.log('at chapel')
     const visibility = navTab.getAttribute("data-visible");
     if (!isIntersecting) {
       if (!atChapel) {
@@ -74,12 +76,9 @@ const checkIntersection = () => {
         } else {
           navIcon.src;
           navIcon.src = "src/assets/menu.png";
-          ("working2");
           userIcon.src = "src/assets/userwhite.png";
         }
         navigation.classList.remove("navchange");
-        page2.classList.add("scroll");
-        firstChild.classList.add("scrollC");
         isIntersecting = true;
         atChapel = true;
         atHeader = false;
@@ -87,12 +86,13 @@ const checkIntersection = () => {
     }
   } else {
     if (isIntersecting) {
+      console.log('not chapel')
       if (atChapel) {
         navIcon.src = "src/assets/menublack.png";
         userIcon.src = "src/assets/user.png";
         navigation.classList.add("navchange");
-        page2.classList.remove("scroll");
-        firstChild.remove("scrollC");
+        // page2.classList.remove("scroll");
+        // firstChild.remove("scrollC");
         isIntersecting = false;
         atChapel = false;
         atHeader = false;
@@ -115,8 +115,8 @@ const checkIntersection = () => {
           userIcon.src = "src/assets/userwhite.png";
         }
         navigation.classList.remove("navchange");
-        page2.classList.add("scroll");
-        firstChild.classList.add("scrollC");
+        // page2.classList.add("scroll");
+        // firstChild.classList.add("scrollC");
         isIntersecting = true;
         atHeader = true;
         atChapel = false;
@@ -128,8 +128,8 @@ const checkIntersection = () => {
         navIcon.src = "src/assets/menublack.png";
         userIcon.src = "src/assets/user.png";
         navigation.classList.add("navchange");
-        page2.classList.remove("scroll");
-        firstChild.classList.remove("scrollC");
+        // page2.classList.remove("scroll");
+        // firstChild.classList.remove("scrollC");
         isIntersecting = false;
         atHeader = false;
         atChapel = false;
