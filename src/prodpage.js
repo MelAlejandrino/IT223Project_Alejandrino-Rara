@@ -49,7 +49,7 @@ const checkIntersection = () => {
   const navRect = headerNav.getBoundingClientRect();
   const headerRect = headerpage.getBoundingClientRect(); 
 
-  if (navRect.bottom >= headerRect.top && navRect.top <= (headerRect.bottom - 50)) {
+  if (navRect.bottom >= headerRect.top && navRect.top <= (headerRect.bottom - 500)) {
     const visibility = navTab.getAttribute("data-visible");
     if (!isIntersecting) {
       if (!atChapel) {

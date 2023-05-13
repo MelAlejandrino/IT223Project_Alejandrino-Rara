@@ -64,7 +64,7 @@ const checkIntersection = () => {
   }
   if (
     navRect.bottom >= chapelRect.top - 50 &&
-    navRect.top <= chapelRect.bottom
+    navRect.top <= chapelRect.bottom - 100
   ) {
     console.log('at chapel')
     const visibility = navTab.getAttribute("data-visible");
