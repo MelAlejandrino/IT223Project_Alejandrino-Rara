@@ -6,6 +6,7 @@
 body {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  background-color: #f4f1ed;
 }
 
 /* header */
@@ -153,6 +154,8 @@ section:not(.headpage) {
   display: flex;
   align-items: center;
   justify-content: center;
+position: relative;
+z-index: 1;
 }
 
 .page-2-content {
@@ -207,6 +210,8 @@ section:not(.headpage) {
   display: grid;
   place-items: center;
   text-align: center;
+  position: relative;
+z-index: 1;
 }
 
 .wrapper-content{
@@ -227,11 +232,13 @@ section:not(.headpage) {
   flex-wrap: wrap;
   margin-bottom: 1em;
 }
-.card {
+.page-3 .card {
   width: clamp(20em,30vw, 30em);
+}
+.card {
   background-color: white;
   padding: 1em;
-  /* border-radius: 3em; */
+  border-radius: 1em;
   cursor: pointer;
 
 }
@@ -347,6 +354,10 @@ section:not(.headpage) {
   background: url('./assets/chapel.jpg') no-repeat;
 }
 
+.cartPage > .background-container{
+  background: url('./assets/cartbg.jpg') no-repeat;
+}
+
 .background-container {
   position: absolute;
   top: 0;
@@ -356,7 +367,6 @@ section:not(.headpage) {
   background-position: center !important;
   background-size: cover !important;
   filter: brightness(50%);
-
 }
 
 /* products */
@@ -383,6 +393,7 @@ section:not(.headpage) {
   align-items: center;
   gap: 3em;
   font-size: 1.2rem;
+  flex-wrap: wrap;
 }
 
 label{
@@ -402,8 +413,18 @@ input[type="radio"]{
   padding: 2em 0em;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  gap: 0.5em;
 }
 
 .activeCategory{
   background-color: black;
+}
+
+.itemsPage > .prodContainer > .card{
+  margin-top: 1em;
+  width: 48%;
+}
+
+.scroll{
+  transition: all 0.3s linear;
 }

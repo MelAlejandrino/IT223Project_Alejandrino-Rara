@@ -50,6 +50,19 @@ for (let i = 0; i < radioButtons.length; i++) {
         })
         .catch((error) => console.error(error));
     }
+
+    if (this.value === "highCateg") {
+      fetch("src/products.json")
+        .then((response) => response.json())
+        .then((data) => {
+          data.forEach((item) => {
+            if (item.highend === "YES") {
+              displayProduct(item);
+            }
+          });
+        })
+        .catch((error) => console.error(error));
+    }
   });
 }
 
@@ -66,7 +79,7 @@ function fetchProducts() {
 
 function displayProduct(item) {
   container.innerHTML += `
-    <div class="card">
+    <div class="card item">
       <div class="card-img">
         <picture>
           <img src="${item.src}" alt="" />
@@ -77,10 +90,6 @@ function displayProduct(item) {
       </div>
       <div class="card-details">
         <h1>${item.name}</h1>
-        <p>${item.details}</p>
-        <div class="card-button">
-          <button>${item.price}</button>
-        </div>
       </div>
     </div>
   `;
