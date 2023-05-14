@@ -5,7 +5,16 @@ const header = document.getElementById("header-tab");
 const sections = document.querySelectorAll("section");
 const headerpage = document.querySelector(".prodPage");
 const navigation = document.querySelector(".nav-tab");
-let atHeader = true;
+let atHeader;
+
+if (window.location.pathname === '/products.html') {
+  atHeader = true;
+} else if (window.location.pathname === '/cart.html') {
+  atHeader = false;
+} else {
+  console.log('File not found');
+}
+
 
 navIcon.addEventListener("click", () => {
   const visibility = navTab.getAttribute("data-visible");
@@ -27,6 +36,7 @@ navIcon.addEventListener("click", () => {
     navTab.setAttribute("data-visible", false);
     header.setAttribute("aria-expanded", false);
     if (atHeader === true || atChapel === true) {
+      console.log('test1');
       navIcon.src = "src/assets/menu.png";
       userIcon.src = "src/assets/userwhite.png";
     }
@@ -57,6 +67,7 @@ const checkIntersection = () => {
           navIcon.src = "src/assets/menublack.png";
           userIcon.src = "src/assets/user.png";
         } else {
+          console.log('test2');
           navIcon.src = "src/assets/menu.png";
           userIcon.src = "src/assets/userwhite.png";
         }
