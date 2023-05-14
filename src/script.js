@@ -29,34 +29,20 @@ if (window.matchMedia("(max-width: 640px)").matches) {
 }
 
 // nav-tab
-// const observer = new IntersectionObserver(function (entries, observer) {
-//   entries.forEach((entry) => {
-//     const visibility = navTab.getAttribute("data-visible");
-//     if (entry.isIntersecting) {
-//       atHeader = true;
-//       navigation.classList.remove("navchange");
-//       if (atHeader === true) {
-//         if (visibility === "true") {
-//           navIcon.src = "src/assets/menublack.png";
-//           userIcon.src = "src/assets/user.png";
-//         }
-//         if (visibility === "false") {
-//           navIcon.src = "src/assets/menu.png";
-//           userIcon.src = "src/assets/userwhite.png";
-//         }
-//       }
-//     } else {
-//       atHeader = false;
-//       navigation.classList.add("navchange");
-//       if (atHeader === false) {
-//       }
-//       navIcon.src = "src/assets/menublack.png";
-//       userIcon.src = "src/assets/user.png";
-//     }
-//   });
-// });
+const headerspage = document.querySelector('.headpage')
+const observer3 = new IntersectionObserver(function (entries, observer) {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      console.log(entry)
+    } else {
+      console.log('not')
+    }
+  });
+},{
+  threshold: 0.6,
+});
 
-// observer.observe(headerpage);
+observer3.observe(headerspage);
 
 
 

@@ -479,3 +479,18 @@ main {
   /* overflow: hidden;
   max-height: 120em; */
 }
+
+
+/* footer */
+ul[role="list"]{
+  display: flex;
+}
+.footer-links > ul > li > a{
+  background-color: black;
+  display: block;
+  padding: 0.5em;
+}
+
+.footer-links img {
+  width: 2em;
+}
