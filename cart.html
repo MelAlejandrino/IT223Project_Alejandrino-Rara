@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="src/css-reset.css" />
     <link rel="stylesheet" href="src/style.css" />
     <link rel="stylesheet" href="src/cartcounter.css" />
+    <link rel="stylesheet" href="src/style2.css" />
   </head>
   <body>
     <header aria-expanded="false" id="header-tab">
@@ -17,8 +18,8 @@
           <nav>
             <ul role="list">
               <li><a href="index.html">HOME</a></li>
-              <li><a href="">CART</a></li>
-              <li><a href="">CHAPEL</a></li>
+              <li><a href="cart.html">CART</a></li>
+              <li><a href="chapel.html">CHAPEL</a></li>
               <li><a href="products.html">PRODUCTS</a></li>
             </ul>
           </nav>
@@ -33,7 +34,7 @@
           <ul role="list">
             <li><a href="products.html">PRODUCTS</a></li>
             <li class="cart">
-              <a href="">CART</a>
+              <a href="cart.html">CART</a>
               <div class="counter">0</div>
             </li>
             <li>
@@ -45,13 +46,17 @@
         </nav>
       </div>
     </header>
-
     <main>
       <section class="cartPage">
         <div class="cartWrapper">
-          <h1>My Cart</h1>
-          <div class="cartContainer">
-            test
+          <div class="column1">
+            <h1>My Cart</h1>
+          </div>
+          <div class="column2">
+            <div class="cartContainer"></div>
+            <div class="checkOut">
+              <button>CHECKOUT</button>
+            </div>
           </div>
         </div>
         <div class="background-container"></div>
@@ -61,5 +66,7 @@
     <footer></footer>
     <script src="src/script.js"></script>
     <script src="src/prodpage.js"></script>
+    <script src="src/addcart.js"></script>
+    <script src="src/fetchcart.js"></script>
   </body>
 </html>

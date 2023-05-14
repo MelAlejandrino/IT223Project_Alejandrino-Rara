@@ -66,7 +66,6 @@ const checkIntersection = () => {
     navRect.bottom >= chapelRect.top - 50 &&
     navRect.top <= chapelRect.bottom - 100
   ) {
-    console.log('at chapel')
     const visibility = navTab.getAttribute("data-visible");
     if (!isIntersecting) {
       if (!atChapel) {
@@ -86,7 +85,6 @@ const checkIntersection = () => {
     }
   } else {
     if (isIntersecting) {
-      console.log('not chapel')
       if (atChapel) {
         navIcon.src = "src/assets/menublack.png";
         userIcon.src = "src/assets/user.png";
@@ -139,3 +137,8 @@ const checkIntersection = () => {
 };
 
 window.addEventListener("scroll", checkIntersection);
+
+const moreButton = document.getElementById('moreButton');
+moreButton.addEventListener('click', () => {
+  window.location.href = '../products.html'
+})

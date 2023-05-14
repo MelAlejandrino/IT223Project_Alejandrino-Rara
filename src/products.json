@@ -2,36 +2,40 @@
   {
     "name": "White Cross' Lords Prayer Casket",
     "details": "Whitecasket with SILVER Accents",
-    "price": "₱110,500",
+    "price": "110,500",
     "src": "./src/assets/coffin1.png",
     "disc": "NO",
     "highend": "YES",
-    "width": "40%"
+    "width": "40%",
+    "key": "1"
   },
   {
     "name": "Monarch",
     "details": "Solid Mahogany Wood Casket withIvory Velvet Interior",
-    "price": "₱130,999",
+    "price": "130,999",
     "src": "./src/assets/coffin2.png",
     "disc": "NO",
     "highend": "YES",
-    "width": "60%"
+    "width": "60%",
+    "key": "2"
   },
   {
     "name": "Howard White",
     "details": "Metal Casket in White Finishand White Interior",
-    "price": "₱100,000",
+    "price": "100,000",
     "src": "./src/assets/coffin3.png",
     "disc": "NO",
     "highend": "YES",
-    "width": "40%"
+    "width": "40%",
+    "key": "3"
   },
   {
     "name": "Bird",
     "details": "plain white and white gold",
-    "price": "₱60,500",
-    "src": "./src/assets/coffin2.png",
+    "price": "60,500",
+    "src": "./src/assets/bird.png",
     "disc": "YES",
-    "width": "60%"
+    "width": "60%",
+    "key": "4"
   }
 ]

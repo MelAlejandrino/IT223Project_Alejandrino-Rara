@@ -1,7 +1,6 @@
 // atong javascript file
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
-      console.log(entry)
       if(entry.isIntersecting){
           entry.target.classList.add('show');
       } else {
@@ -59,6 +58,7 @@ if (window.matchMedia("(max-width: 640px)").matches) {
 
 // observer.observe(headerpage);
 
-// add to cart
+
+
 
 

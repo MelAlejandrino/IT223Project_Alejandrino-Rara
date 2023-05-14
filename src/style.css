@@ -231,7 +231,7 @@ section:not(.headpage) {
   margin-bottom: 1em;
 }
 .page-3 .card {
-  width: clamp(20em, 30vw, 25em);
+  width: clamp(20em, 30vw, 30em);
 }
 .card {
   background-color: transparent;
@@ -254,13 +254,29 @@ section:not(.headpage) {
 }
 
 .card-details > h1 {
-  font-size: 1.2rem;
+  font-size: clamp(0.2rem, 4.2vw, 1.2rem);
+  white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  white-space: pre-wrap;       /* css-3 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+  word-break: break-all;
+  white-space: normal;
 }
 
 .card-details > p {
   font-style: italic;
   color: gray;
-  font-size: 0.9rem;
+  font-size: clamp(0.2rem, 4.2vw, 0.9rem);
+  white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  white-space: pre-wrap;       /* css-3 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: -webkit-pre-wrap; /* Newer versions of Chrome/Safari*/
+  word-break: break-all;
+  white-space: normal;
 }
 
 .card-button {
@@ -430,7 +446,8 @@ input[type="radio"] {
 
 .itemsPage > .prodContainer > .card {
   margin-top: 1em;
-  width: 48%;
+  width: clamp(20rem, 48%, 52rem);
+  /* width: 48%; */
 }
 
 .scroll {
@@ -459,6 +476,6 @@ main {
   display: flex;
   flex-direction: column;
   height: fit-content;
-  overflow: hidden;
-  max-height: 120em;
+  /* overflow: hidden;
+  max-height: 120em; */
 }

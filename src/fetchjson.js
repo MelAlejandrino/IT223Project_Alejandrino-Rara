@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 for (let i = 0; i < radioButtons.length; i++) {
   radioButtons[i].addEventListener('change', function() {
-    container.innerHTML = ''; // Clear existing results before fetching and displaying products
+    container.innerHTML = '';
 
     if (this.value === "allCateg") {
       fetchProducts();
@@ -85,7 +85,7 @@ function displayProduct(item) {
           <img src="${item.src}" alt="" />
         </picture>
         <div class="card-cart">
-          <h1 id="addCart">ADD TO CART</h1>
+          <h1 id="addCart" data-key="${item.key}">ADD TO CART</h1>
         </div>
       </div>
       <div class="card-details">
