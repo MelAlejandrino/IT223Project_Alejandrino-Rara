@@ -1,0 +1,168 @@
+body {
+    background-color: blanchedalmond;
+    margin: 0;
+  }
+  
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  nav a:hover {
+    color: burlywood;
+  }
+  
+  
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh; /* Increase the height to make the page bigger */
+  }
+  
+  .box-container {
+    display: flex;
+    justify-content: space-between;
+    width: auto; /* Increase the width to make the boxes bigger */
+  }
+  
+  .box {
+    background-color: aliceblue;
+    width: auto;
+    height: 500px; /* Increase the height to make the boxes bigger */
+    border: 1px solid wheat;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    align-items: center;
+    transition: all 0.3s ease;
+    overflow: hidden;
+   
+   
+   
+  }
+  .box:hover::before {
+    content: "COFFIN";
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: #ffffff;
+    z-index: -1;
+    transform: rotate(45deg);
+    transition: all 0.3s ease;
+  }
+  
+  
+  .box:hover::before {
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    content: "iCOFFIN CHAPELS";
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.7);
+    box-shadow: 0 0 10px rgba(158, 34, 34, 0.5);
+  }
+  
+  .box h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+    color: #333333;
+    text-decoration: underline;
+  }
+  
+  
+  .box p {
+    font-size: 18px;
+    text-align: justify;
+    padding: 10px;
+    color: #666666;
+  }
+  .box:hover {
+    box-shadow: 0px 0px 10px rgba(124, 18, 18, 0.5);
+    cursor: pointer;
+  }
+  footer {
+    background-color: #333333;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .footer-left {
+    flex: 1;
+  }
+  
+  .footer-right {
+    flex: 1;
+    text-align: right;
+  }
+  
+  .footer-left p,
+  .footer-right p {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .footer-left ul,
+  .footer-right ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .footer-left li,
+  .footer-right li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .footer-right a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-left: 10px;
+  }
+  
+  .footer-right a:hover {
+    text-decoration: underline;
+  }
+  
+ 
