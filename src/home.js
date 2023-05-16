@@ -63,7 +63,7 @@ const checkIntersection = () => {
     atHeader = false;
   }
   if (
-    navRect.bottom >= chapelRect.top - 150 &&
+    navRect.bottom >= chapelRect.top - 50 &&
     navRect.top <= chapelRect.bottom - 100
   ) {
     console.log('at chapel')
@@ -142,4 +142,10 @@ window.addEventListener("scroll", checkIntersection);
 const moreButton = document.getElementById('moreButton');
 moreButton.addEventListener('click', () => {
   window.location.href = '../products.html'
+})
+
+
+const chapelButton = document.getElementById('chapelButton');
+chapelButton.addEventListener('click', ()=>{
+  window.location.href = 'chapel.html'
 })

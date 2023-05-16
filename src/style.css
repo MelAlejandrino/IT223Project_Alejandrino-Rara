@@ -3,6 +3,26 @@
 :root {
   --clr-neutral: rgb(132, 68, 0);
 }
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+  width: 1px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(0, 0, 0); 
+  border-radius: 10px;
+  width: 1px;
+}
+
+
 body {
   font-family: 'Lora', serif;
   overflow-x: hidden;
@@ -185,6 +205,13 @@ section:not(.headpage) {
   font-size: clamp(1rem, 5vw, 2rem);
   font-weight: 200;
   font-style: italic;
+}
+
+.title-content + picture > img{
+  width: 40em;
+  height: 40em;
+  object-fit: contain;
+  object-position: 50% -10%;
 }
 .wrapper-content {
   padding: 9em 2em;
@@ -438,6 +465,7 @@ input[type="radio"] {
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 0.5em;
+  background-color: white;
 }
 
 .activeCategory {
@@ -476,21 +504,88 @@ main {
   display: flex;
   flex-direction: column;
   height: fit-content;
-  /* overflow: hidden;
-  max-height: 120em; */
+  max-height: 100vh;
 }
 
 
 /* footer */
-ul[role="list"]{
+footer{
+  padding: 1em;
   display: flex;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  background: url('assets/footer.jpg') no-repeat;
+  background-size: cover;
 }
-.footer-links > ul > li > a{
-  background-color: black;
-  display: block;
-  padding: 0.5em;
+.footer-wrapper{
+  padding: 2em 3em 5em 3em;
+  width: 80%;
+  display: flex;
+  gap: 2em;
+  justify-content: space-between;
+  border-radius: 0em 2em 0em 1em;
+  background-color: rgba(255, 255, 255, 0.69);
 }
 
+.footer-wrapper h1{
+  font-size: clamp(0.5rem, 5vw, 3rem);
+  max-width: 10em;
+}
+ul[role="list"]{
+  display: flex;
+  gap: 0.5em;
+}
+.footer-links > ul > li > a{
+  border-radius: 50%;
+  background-color: black;
+  display: block;
+  max-width: 2.5em;
+  padding: 0.5em;
+}
+.footer-column1{
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
 .footer-links img {
-  width: 2em;
+  width: 100%;
+}
+
+.scrollC, .scrollCont{
+  transition: all 0.3s linear;
+}
+.footer-column2 ul{
+  flex-direction: column;
+  align-items: flex-start;
+}
+.footer-column2 a{
+  color: black;
+  font-size: clamp(0.3rem, 3vw, 1rem);
+}
+
+/* page-5 */
+.page-5-wrapper{
+  width: 100%;
+  display: flex;
+  height: 120vh;
+}
+
+.p5-c1{
+  width: 100%;
+  height: 100%;
+}
+
+.p5-c1 > picture, .p5-c1 img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.p5-c2{
+  padding: 10em 2em;
+}
+
+.p5-c2 h1{
+  font-size: clamp(1rem, 10vw, 2rem);
+  border-bottom: 1px solid black;
 }

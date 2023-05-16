@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iCoffin</title>
+    <link rel="shortcut icon" href="src/assets/iC.png" type="image/x-icon" />
+    <link rel="stylesheet" href="src/css-reset.css" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/cartcounter.css" />
+    <link rel="stylesheet" href="src/chapel.css" />
+    <link rel="stylesheet" href="src/checkout.css" />
+  </head>
+  <body>
+    <header
+      aria-expanded="false"
+      id="header-tab"
+      style="position: relative; background-color: white"
+    >
+      <div class="nav-holder" data-visible="false">
+        <div class="wrapper-nav">
+          <nav>
+            <ul role="list">
+              <li><a href="index.html">HOME</a></li>
+              <li><a href="cart.html">CART</a></li>
+              <li><a href="chapel.html">CHAPEL</a></li>
+              <li><a href="products.html">PRODUCTS</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="nav-tab navchange" style="position: relative">
+        <div class="menu">
+          <img src="src/assets/menublack.png" alt="" id="menu-icon" />
+          <h1 id="icon"><a href="index.html">iCoffin</a></h1>
+        </div>
+        <nav>
+          <ul role="list">
+            <li><a href="products.html">PRODUCTS</a></li>
+            <li class="cart">
+              <a href="cart.html">CART</a>
+              <div class="counter">0</div>
+            </li>
+            <li>
+              <a href=""
+                ><img src="src/assets/user.png" alt="" id="userIcon"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="page-checkout">
+        <form action="">
+            <div>
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" placeholder="Name" />
+                    <label for="age">Age:</label>
+                    <input type="text" placeholder="Age" />
+                    <label for="gender">Gender:</label>
+                    <select name="gender" id="">
+                      <option value="">MALE</option>
+                      <option value="">FEMALE</option>
+                    </select>
+                    <h1>Measurement</h1>
+                    <input type="text" placeholder="length" /><input
+                      type="text"
+                      placeholder="height"
+                    />
+                    <label for="payment">PAYMENT METHOD:</label>
+                    <select name="payment" id="">
+                        <option value="">GCASH</option>
+                        <option value="">PAYPAL</option>
+                        <option value="">CREDIT CARD</option>
+                      </select>
+                  </div>
+        
+                  <picture>
+                    <img src="src/assets/spongebob.webp" alt="" />
+                  </picture>
+            </div>
+
+          <input type="submit" value="SUBMIT">
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-wrapper">
+        <div class="footer-column1">
+          <h1>GET UPDATES AND STAY CONNECTED</h1>
+          <div class="footer-links">
+            <ul role="list">
+              <li>
+                <a href="">
+                  <img src="src/assets/facebook.png" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="src/assets/github.png" alt="" />
+                </a>
+              </li>
+              <li>
+                <a href=""><img src="src/assets/gmail.png" alt="" /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-column2">
+          <ul role="list">
+            <li><a href="products.html">SHOP ALL</a></li>
+            <li><a href="">ABOUT</a></li>
+            <li><a href="">CONTACT: 123-456-7890</a></li>
+            <li><a href="">CHAPEL</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="src/script.js"></script>
+    <script src="src/home.js"></script>
+    <script src="src/track.js"></script>
+    <script src="src/addcart.js"></script>
+  </body>
+</html>

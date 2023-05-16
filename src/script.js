@@ -28,19 +28,13 @@ if (window.matchMedia("(max-width: 640px)").matches) {
   namePC.removeAttribute("hidden", "");
 }
 
-// nav-tab
 const headerspage = document.querySelector('.headpage')
-const observer3 = new IntersectionObserver(function (entries, observer) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      console.log(entry)
-    } else {
-      console.log('not')
-    }
-  });
-},{
-  threshold: 0.6,
+const observer3 = new IntersectionObserver((entries, observer) => {
+  const entry = entries[0];
+  console.log('entry', entry);
+  console.log('entry.isIntersecting', entry.isIntersecting);
 });
+
 
 observer3.observe(headerspage);
 

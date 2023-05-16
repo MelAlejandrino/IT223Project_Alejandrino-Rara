@@ -1,0 +1,67 @@
+main{
+    max-height: 150vh;
+}
+
+section{
+    align-items: flex-start;
+}
+form{
+    display: flex;
+    gap: 1em; 
+    padding: 1em;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+form > div{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    align-items: center;
+}
+
+form > div > div{
+    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+form > div > div{
+    width: 100%;
+}
+
+form label, select{
+    width: 10em;
+    background-color: transparent;
+    color: black;
+    text-align: left;
+    padding: 0;
+}
+
+select{
+    border: 1px solid var(--clr-neutral);
+    padding: 0.5em;
+}
+
+form input{
+    width: 100%;
+    padding: 1em;
+}
+
+form picture, form img{
+    width: 100%;
+    height: 30em;
+    object-fit: cover;
+}
+
+input[type="submit"], select{
+    cursor: pointer;
+}
+
+input[type="submit"]{
+    width: 50%;
+    background: transparent;
+    border: 1px solid var(--clr-neutral);
+}
