@@ -28,7 +28,7 @@ function displayProduct(item) {
 if(cart.length === 0){
     container.innerHTML += `
     <div>
-    <h1>OOPS WAY SULOD MAN CHUY</h1>
+    <h1 class="empty">OOPS WAY SULOD MAN CHUY</h1>
     </div>
   `;
 }else{

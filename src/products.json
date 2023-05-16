@@ -37,5 +37,14 @@
     "disc": "YES",
     "width": "60%",
     "key": "4"
+  },
+  {
+    "name": "Half-couch lidded casket",
+    "details": "half-couch” means that the casket’s lid is divided in half. ",
+    "price": "₱50,000",
+    "src": "./src/assets/Clergy.jpg",
+    "disc": "YES",
+    "width": "60%",
+    "key": "5"
   }
 ]

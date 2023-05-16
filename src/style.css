@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@900&display=swap');
 
 :root {
   --clr-neutral: rgb(132, 68, 0);
@@ -22,7 +23,10 @@
   width: 1px;
 }
 
-
+.japanese{
+  font-family: 'Noto Serif JP', serif;
+  font-size: clamp(1rem, 4.5vw, 10rem);
+}
 body {
   font-family: 'Lora', serif;
   overflow-x: hidden;
@@ -195,9 +199,10 @@ section:not(.headpage) {
 
 .title-content {
   margin-top: 15%;
+  width: 50%;
 }
 .title-content > h1 {
-  font-size: clamp(2rem, 8vw, 4rem);
+  font-size: clamp(2rem, 8vw, 20rem);
   color: var(--clr-neutral);
 }
 
@@ -583,9 +588,27 @@ ul[role="list"]{
 
 .p5-c2{
   padding: 10em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
 }
 
 .p5-c2 h1{
   font-size: clamp(1rem, 10vw, 2rem);
+
+}
+
+.p5-c2 > *{
   border-bottom: 1px solid black;
+}
+
+.page-6{
+  display: grid;
+  place-items: center;
+  min-height: 120vh;
+}
+
+.page-6 > p{
+  width: 60%;
+  text-align: center;
 }

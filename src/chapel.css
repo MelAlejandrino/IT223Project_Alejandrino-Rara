@@ -116,5 +116,12 @@ nav a:hover {
 
 main{
     min-height: 100vh;  
+    max-height: 200vh;
 }
 
+@media screen and (width < 900px) {
+  .box-container{
+    flex-direction: column;
+  }
+  
+}
