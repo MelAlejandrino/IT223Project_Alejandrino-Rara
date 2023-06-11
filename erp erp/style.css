@@ -1,0 +1,41 @@
+#formContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid black;
+    padding: 20px;
+    background-color: #f5f5f5;
+  }
+  
+  #closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  
+  #myForm {
+    margin-top: 20px;
+  }
+  
+  #myForm label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  #myForm input, #myForm select {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  #myForm input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #myForm input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  

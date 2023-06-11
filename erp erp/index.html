@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="form.js">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="formContainer">
+        <button id="closeButton" onclick="closeForm()">Close</button>
+        <h2>Submit Form</h2>
+        <form id="myForm">
+          <label for="name">Name:</label>
+          <input type="text" id="name" required>
+      
+          <label for="age">Age:</label>
+          <input type="number" id="age" required>
+      
+          <label for="gender">Gender:</label>
+          <select id="gender" required>
+            <option value="">Select gender</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+      
+          <label for="measurement">Measurement:</label>
+          <input type="text" id="measurement" required>
+      
+          <label for="paymentMethod">Payment Method:</label>
+          <select id="paymentMethod" required>
+            <option value="">Select payment method</option>
+            <option value="gcash">GCash</option>
+            <option value="paymaya">PayMaya</option>
+            <option value="paypal">PayPal</option>
+            <option value="creditcard">Credit Card</option>
+          </select>
+      
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      
+</body>
+</html>
