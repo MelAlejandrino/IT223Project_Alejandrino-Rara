@@ -36,7 +36,9 @@
           <h1 id="icon"><a href="index.html">iCoffin</a></h1>
         </div>
         <nav>
-          <ul role="list">
+          <ul role="list" class="navpctab">
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="chapel.html">CHAPEL</a></li>
             <li><a href="products.html">PRODUCTS</a></li>
             <li class="cart">
               <a href="cart.html">CART</a>
@@ -53,39 +55,74 @@
     </header>
 
     <main>
-      <section class="page-checkout">
-        <form action="">
+      <section class="page-checkout" style="position: relative">
+        <form action="" onsubmit="handleSubmit(event)">
+          <div>
             <div>
-                <div>
-                    <label for="name">Name:</label>
-                    <input type="text" placeholder="Name" />
-                    <label for="age">Age:</label>
-                    <input type="text" placeholder="Age" />
-                    <label for="gender">Gender:</label>
-                    <select name="gender" id="">
-                      <option value="">MALE</option>
-                      <option value="">FEMALE</option>
-                    </select>
-                    <h1>Measurement</h1>
-                    <input type="text" placeholder="length" /><input
-                      type="text"
-                      placeholder="height"
-                    />
-                    <label for="payment">PAYMENT METHOD:</label>
-                    <select name="payment" id="">
-                        <option value="">GCASH</option>
-                        <option value="">PAYPAL</option>
-                        <option value="">CREDIT CARD</option>
-                      </select>
-                  </div>
-        
-                  <picture>
-                    <img src="src/assets/spongebob.webp" alt="" />
-                  </picture>
+              <label for="name">Name:</label>
+              <input type="text" placeholder="Name" name="name" />
+              <label for="age">Age:</label>
+              <input type="text" placeholder="Age" name="age" />
+              <label for="gender">Gender:</label>
+              <select name="gender" id="genderSelect">
+                <option value="male">MALE</option>
+                <option value="female">FEMALE</option>
+              </select>
+              <h1>Measurement</h1>
+              <input name="length" type="text" placeholder="length" />
+              <input name="height" type="text" placeholder="height" />
+              <label for="payment">PAYMENT METHOD:</label>
+              <select name="payment" id="paymentSelect">
+                <option value="gcash">GCASH</option>
+                <option value="paypal">PAYPAL</option>
+                <option value="creditcard">CREDIT CARD</option>
+              </select>
             </div>
 
-          <input type="submit" value="SUBMIT" id="submit">
+            <picture>
+              <img src="src/assets/spongebob.webp" alt="" />
+            </picture>
+          </div>
+
+          <input type="submit" value="SUBMIT" id="submit" />
         </form>
+
+        <div class="checkoutmessage | hiddenform" style="position: absolute">
+          <button id="closeButton" onclick="closeForm()">Close</button>
+          <form id="myForm">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="formname" value="" disabled />
+
+            <label for="age">Age:</label>
+            <input type="text" id="formage" value="" disabled />
+
+            <label for="gender">Gender:</label>
+            <input type="text" id="formgender" name="gender" disabled />
+
+            <h1>Measurement</h1>
+            <input
+              name="length"
+              value=""
+              type="text"
+              placeholder="length"
+              id="formlength"
+              disabled
+            />
+            <input
+              name="height"
+              value=""
+              type="text"
+              placeholder="height"
+              id="formheight"
+              disabled
+            />
+
+            <label for="paymentMethod">Payment Method:</label>
+            <input type="text" id="formpaymentMethod" name="paymentMethod" disabled />
+
+            <input type="submit" value="SUBMIT">
+          </form>
+        </div>
       </section>
     </main>
 
@@ -126,5 +163,55 @@
     <script src="src/track.js"></script>
     <script src="src/addcart.js"></script>
     <script src="src/checkout.js"></script>
+
+    <script>
+      function handleSubmit(event) {
+        event.preventDefault();
+
+        const name = document.querySelector(
+          'input[type="text"][placeholder="Name"]'
+        ).value;
+
+        const age = document.querySelector(
+          'input[type="text"][name="age"]'
+        ).value;
+
+        const gender = document.querySelector("#genderSelect").value;
+
+        const length = document.querySelector(
+          'input[type="text"][name="length"]'
+        ).value;
+
+        const height = document.querySelector(
+          'input[type="text"][name="height"]'
+        ).value;
+
+        const payment = document.querySelector("#paymentSelect").value;
+
+        const formname = (document.getElementById("formname").value = name);
+        const formage = (document.getElementById("formage").value = age);
+        const formgender = (document.getElementById("formgender").value = gender);
+        const formlength = (document.getElementById("formlength").value = length);
+        const formheight = (document.getElementById("formheight").value = height);
+        const paymentMethod = document.getElementById("formpaymentMethod").value = payment;
+
+        document
+          .querySelector(".checkoutmessage")
+          .classList.remove("hiddenform");
+
+        console.log(name);
+        console.log(age);
+        console.log(gender);
+        console.log(length);
+        console.log(height);
+        console.log(payment);
+      }
+    </script>
+
+    <script>
+      function closeForm() {
+        document.querySelector(".checkoutmessage").classList.add("hiddenform");
+      }
+    </script>
   </body>
 </html>

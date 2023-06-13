@@ -25,24 +25,37 @@ function displayProduct(item) {
       </div>
     `;
 }
-if(cart.length === 0){
-    container.innerHTML += `
+if (cart.length === 0) {
+  container.innerHTML += `
     <div>
-    <h1 class="empty">OOPS WAY SULOD MAN CHUY</h1>
+    <h1 class="empty">YOU DID NOT ADD A PRODUCT YET</h1>
     </div>
   `;
-}else{
-    cart.forEach((prod) => {
-        fetch("src/products.json")
-        .then((response) => response.json())
-        .then((data) => {
-          data.forEach((item) => {
-            if (item.key === prod) {
-              displayProduct(item);
-            }
-          });
-        })
-        .catch((error) => console.error(error));
-    });
-    
+} else {
+  let totalPrice = 0;
+  const fetchPromises = cart.map((prod) => {
+    return fetch("src/products.json")
+      .then((response) => response.json())
+      .then((data) => {
+        data.forEach((item) => {
+          if (item.key === prod) {
+            displayProduct(item);
+            let price = item.price.replace(",", ""); // Remove commas from the price
+            console.log(price);
+            totalPrice += Number(price);
+          }
+        });
+      })
+      .catch((error) => console.error(error));
+  });
+
+  Promise.all(fetchPromises)
+    .then(() => {
+      console.log(totalPrice);
+      const totalCheckout = document.getElementById('totalCheckout');
+      totalCheckout.innerText = `₱${totalPrice}`;
+    })
+    .catch((error) => console.error(error));
 }
+
+
