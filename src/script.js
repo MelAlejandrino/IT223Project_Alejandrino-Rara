@@ -13,6 +13,7 @@ const hiddenElements = document.querySelectorAll('.hidden');
 hiddenElements.forEach((el) => observer.observe(el));
 // icon
 // name
+
 const namePC = document.getElementById("icon");
 window.addEventListener("resize", () => {
   if (window.matchMedia("(max-width: 640px)").matches) {

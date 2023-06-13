@@ -5,6 +5,7 @@ const header = document.getElementById("header-tab");
 const sections = document.querySelectorAll("section");
 const headerpage = document.querySelector(".prodPage");
 const navigation = document.querySelector(".nav-tab");
+const footer = document.querySelector('footer');
 let atHeader;
 
 if (window.location.pathname === '/products.html') {
@@ -32,6 +33,7 @@ navIcon.addEventListener("click", () => {
     sections.forEach((section) => {
       section.classList.add("blursection");
     });
+    footer.classList.add('blursection');
   } else {
     navTab.setAttribute("data-visible", false);
     header.setAttribute("aria-expanded", false);
@@ -47,6 +49,7 @@ navIcon.addEventListener("click", () => {
     sections.forEach((section) => {
       section.classList.remove("blursection");
     });
+    footer.classList.remove('blursection');
   }
 });
 
