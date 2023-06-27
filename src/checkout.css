@@ -64,6 +64,7 @@ input[type="submit"]{
     width: 50%;
     background: transparent;
     border: 1px solid var(--clr-neutral);
+    margin: auto;
 }
 
 
